@@ -1,5 +1,5 @@
 //
-//  MeetingTimeTableViewController.swift
+//  DisplaySessions.swift
 //  CoursePlanner
 //
 //  Created by Matthew Harrilal on 12/6/17.
@@ -9,9 +9,7 @@
 import Foundation
 import UIKit
 
-class MeetingTimesTableViewController: UITableViewController {
-    var sessions = [Session]()
-    
+class DisplaySessionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,6 +19,6 @@ class MeetingTimesTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       
+        
     }
 }

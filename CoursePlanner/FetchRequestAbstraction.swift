@@ -10,11 +10,12 @@ import Foundation
 import UIKit
 import CoreData
 
-let displayInstance = DisplayCourseViewController()
-// This abstracts the way the user makes a fetch request making the entity dynamic
-func fetchRequestFromViewContext<T: NSManagedObject>(nameOfEntity: String, type: T.Type) {
-    let fetchRequest = NSFetchRequest<T>(entityName: nameOfEntity)
-    do {
-        let result = try? CoreDataStack.instance.viewContext.fetch(fetchRequest)
-    }
-}
+
+//extension Course {
+//    convenience init(context: NSManagedObjectContext) {
+//        let entity = NSEntityDescription()
+//        entity.name = "Course"
+//        self.init(entity: entity, insertInto: context)
+//    }
+//}
+

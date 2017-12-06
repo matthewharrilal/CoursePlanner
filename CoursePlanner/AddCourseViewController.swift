@@ -29,8 +29,8 @@ class AddCourseViewController: UIViewController {
         guard let courseName = addCourseTextField.text else {return}
         let viewContext = CoreDataStack.instance.viewContext
         let course = Course(context: viewContext)
+    
         course.nameOfCourse = courseName
-        course.setValue(courseName, forKey: "nameOfCourse")
         CoreDataStack.instance.saveTo(context: viewContext)
     }
 }
