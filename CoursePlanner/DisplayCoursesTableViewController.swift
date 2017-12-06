@@ -38,6 +38,19 @@ class DisplayCourseViewController: UITableViewController {
         tableView.dataSource = dataSource
         dataSource.items = courses
         
+        // MARK: TODO Abstract the fetch request to core data as well as saving values there
+//        let fetchRequest = NSFetchRequest<Course>(entityName: "Course")
+//        do {
+//            let result = try? CoreDataStack.instance.viewContext.fetch(fetchRequest)
+//            self.courses = result!
+//            print("This is the result from the fetch \(result)")
+//            self.tableView.reloadData()
+//        }
+//        catch {
+//            let error = error as NSError?
+//            print("Fatal error in the fetch request \(error), \(error?.localizedDescription)")
+//        }
+        
         dataSource.configureCell = {(tableView, indexPath) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
             let courseName = self.courses[indexPath.row]
@@ -46,13 +59,24 @@ class DisplayCourseViewController: UITableViewController {
             return cell!
         }
         
-      
+        
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    @IBAction func addCourseButton(_ sender: Any) {
-        
-        
+    
+    @IBAction func unwindToCourses(segue: UIStoryboardSegue) {
+        let fetchRequest = NSFetchRequest<Course>(entityName: "Course")
+        do {
+            let result = try? CoreDataStack.instance.viewContext.fetch(fetchRequest)
+            self.courses = result!
+            print("This is the result from the fetch \(result)")
+            self.tableView.reloadData()
+        }
+        catch {
+            let error = error as NSError?
+            print("Fatal error in the fetch request \(error), \(error?.localizedDescription)")
+        }
     }
 }
