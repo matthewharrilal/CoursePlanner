@@ -19,17 +19,6 @@ class DisplayCourseViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        for name in courses {
-            print("These are the name of the courses \(name.nameOfCourse)")
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        tableView.dataSource = dataSource
-        dataSource.items = courses
-        
-        // MARK: TODO Abstract the fetch request to core data as well as saving values there
         let fetchRequest = NSFetchRequest<Course>(entityName: "Course")
         do {
             let result = try? CoreDataStack.instance.viewContext.fetch(fetchRequest)
@@ -42,10 +31,18 @@ class DisplayCourseViewController: UITableViewController {
             print("Fatal error in the fetch request \(error), \(error?.localizedDescription)")
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        tableView.dataSource = dataSource
+        dataSource.items = courses
+        
         dataSource.configureCell = {(tableView, indexPath) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
             let courseName = self.courses[indexPath.row]
             cell?.textLabel?.text = courseName.nameOfCourse
+            
             return cell!
         }
         

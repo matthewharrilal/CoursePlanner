@@ -14,7 +14,7 @@ class AddCourseViewController: UIViewController {
     
     @IBOutlet weak var addCourseTextField: UITextField!
     
-    
+    var displayCourses: DisplayCourseViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,5 +32,20 @@ class AddCourseViewController: UIViewController {
         course.nameOfCourse = courseName
         course.setValue(courseName, forKey: "nameOfCourse")
         CoreDataStack.instance.saveTo(context: viewContext)
+    }
+    
+    override func willMove(toParentViewController parent: UIViewController?) {
+        let fetchRequest = NSFetchRequest<Course>(entityName: "Course")
+        do {
+            let result = try? CoreDataStack.instance.viewContext.fetch(fetchRequest)
+            displayCourses?.courses = result!
+            print("This is the result from the fetch \(result)")
+            displayCourses?.tableView.reloadData()
+        }
+        catch {
+            let error = error as NSError?
+            print("Fatal error in the fetch request \(error), \(error?.localizedDescription)")
+        }
+        
     }
 }
