@@ -25,7 +25,7 @@ class DisplayCourseViewController: UITableViewController {
         do {
             let result = try? CoreDataStack.instance.viewContext.fetch(fetchRequest)
             self.courses = result!
-            print("This is the result from the fetch \(result)")
+            print("This is the result from the fetch \(String(describing: result))")
             self.tableView.reloadData()
         }
         catch {

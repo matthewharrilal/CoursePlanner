@@ -33,19 +33,4 @@ class AddCourseViewController: UIViewController {
         course.setValue(courseName, forKey: "nameOfCourse")
         CoreDataStack.instance.saveTo(context: viewContext)
     }
-    
-    override func willMove(toParentViewController parent: UIViewController?) {
-        let fetchRequest = NSFetchRequest<Course>(entityName: "Course")
-        do {
-            let result = try? CoreDataStack.instance.viewContext.fetch(fetchRequest)
-            displayCourses?.courses = result!
-            print("This is the result from the fetch \(result)")
-            displayCourses?.tableView.reloadData()
-        }
-        catch {
-            let error = error as NSError?
-            print("Fatal error in the fetch request \(error), \(error?.localizedDescription)")
-        }
-        
-    }
 }

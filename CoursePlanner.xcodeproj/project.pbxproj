@@ -17,6 +17,7 @@
 		1CE37FD51FD779B700654396 /* DisplayCoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE37FD41FD779B700654396 /* DisplayCoursesTableViewController.swift */; };
 		1CE37FD71FD77A1E00654396 /* TableViewAbstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE37FD61FD77A1E00654396 /* TableViewAbstraction.swift */; };
 		1CE37FD91FD77EB500654396 /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE37FD81FD77EB500654396 /* AddCourseViewController.swift */; };
+		1CE37FDB1FD7EB3100654396 /* FetchRequestAbstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE37FDA1FD7EB3100654396 /* FetchRequestAbstraction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1CE37FD41FD779B700654396 /* DisplayCoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCoursesTableViewController.swift; sourceTree = "<group>"; };
 		1CE37FD61FD77A1E00654396 /* TableViewAbstraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAbstraction.swift; sourceTree = "<group>"; };
 		1CE37FD81FD77EB500654396 /* AddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
+		1CE37FDA1FD7EB3100654396 /* FetchRequestAbstraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRequestAbstraction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				1CE37FA11FD6017400654396 /* CoursePlanner.xcdatamodeld */,
 				1CE37FD21FD76F9300654396 /* CoreDataStack.swift */,
 				1CE37FD41FD779B700654396 /* DisplayCoursesTableViewController.swift */,
+				1CE37FDA1FD7EB3100654396 /* FetchRequestAbstraction.swift */,
 				1CE37FD61FD77A1E00654396 /* TableViewAbstraction.swift */,
 				1CE37FD81FD77EB500654396 /* AddCourseViewController.swift */,
 			);
@@ -156,6 +159,7 @@
 				1CE37FD71FD77A1E00654396 /* TableViewAbstraction.swift in Sources */,
 				1CE37FD51FD779B700654396 /* DisplayCoursesTableViewController.swift in Sources */,
 				1CE37FD91FD77EB500654396 /* AddCourseViewController.swift in Sources */,
+				1CE37FDB1FD7EB3100654396 /* FetchRequestAbstraction.swift in Sources */,
 				1CE37FA31FD6017400654396 /* CoursePlanner.xcdatamodeld in Sources */,
 				1CE37FD31FD76F9300654396 /* CoreDataStack.swift in Sources */,
 			);
