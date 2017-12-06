@@ -12,8 +12,6 @@ import CoreData
 
 class DisplayCourseViewController: UITableViewController {
     
-    var courses = [Course]()
-    
     var dataSource = TableViewDataSource(item: [Course]())
     
     override func viewDidLoad() {
