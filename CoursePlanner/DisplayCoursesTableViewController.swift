@@ -32,7 +32,6 @@ class DisplayCourseViewController: UITableViewController {
             let error = error as NSError?
             print("Fatal error in the fetch request \(error), \(error?.localizedDescription)")
         }
-        
         tableView.dataSource = dataSource
         dataSource.items = self.courses
         

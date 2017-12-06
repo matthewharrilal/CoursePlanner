@@ -10,12 +10,11 @@ import Foundation
 import UIKit
 import CoreData
 
-
-// This abstracts the way the user makes a fetch request making the entity dynamic 
-func fetchRequestFromViewContext<T: NSManagedObject>(nameOfEntity: T) {
-    let fetchRequest = NSFetchRequest<T>(entityName: "\(nameOfEntity)")
+let displayInstance = DisplayCourseViewController()
+// This abstracts the way the user makes a fetch request making the entity dynamic
+func fetchRequestFromViewContext<T: NSManagedObject>(nameOfEntity: String, type: T.Type) {
+    let fetchRequest = NSFetchRequest<T>(entityName: nameOfEntity)
     do {
         let result = try? CoreDataStack.instance.viewContext.fetch(fetchRequest)
-       
     }
 }

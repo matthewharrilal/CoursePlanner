@@ -57,7 +57,6 @@ public class CoreDataStack {
     }()
     
     func saveTo(context: NSManagedObjectContext) {
-        
         if context.hasChanges {
             do {
                 print("There were changes made to the managed object and they have been saved")
