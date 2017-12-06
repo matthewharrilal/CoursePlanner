@@ -13,6 +13,7 @@
 		1CE37FA31FD6017400654396 /* CoursePlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1CE37FA11FD6017400654396 /* CoursePlanner.xcdatamodeld */; };
 		1CE37FA51FD6017400654396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CE37FA41FD6017400654396 /* Assets.xcassets */; };
 		1CE37FA81FD6017400654396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CE37FA61FD6017400654396 /* LaunchScreen.storyboard */; };
+		1CE37FD31FD76F9300654396 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE37FD21FD76F9300654396 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1CE37FA41FD6017400654396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CE37FA71FD6017400654396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CE37FA91FD6017400654396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CE37FD21FD76F9300654396 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1CE37FA61FD6017400654396 /* LaunchScreen.storyboard */,
 				1CE37FA91FD6017400654396 /* Info.plist */,
 				1CE37FA11FD6017400654396 /* CoursePlanner.xcdatamodeld */,
+				1CE37FD21FD76F9300654396 /* CoreDataStack.swift */,
 			);
 			path = CoursePlanner;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 				1CE37F9D1FD6017400654396 /* ViewController.swift in Sources */,
 				1CE37F9B1FD6017400654396 /* AppDelegate.swift in Sources */,
 				1CE37FA31FD6017400654396 /* CoursePlanner.xcdatamodeld in Sources */,
+				1CE37FD31FD76F9300654396 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
