@@ -37,6 +37,13 @@ class TableViewDataSource<Items>: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Since the whole point of the abstraction is to keep it dynamic we are going to account for what can go wrong as oppose to what can go right
 //        let cell = tableView.dequeueReusableCell(withIdentifier: <#T##String#>)
+        guard let configureCell = configureCell  else {
+            precondition(false, "Please configure a cell the whole point of abstraction is to keep dynamic")
+        }
+        // The reasont that we can return the configured cell in this cell for row at function which we know returns the table view cell is if we trace back to what configure cell actually is it is an instantion of our type alias which returns a cell
+        
+        // What differs though is that to keep the table view as well as the index path dynamic due to the reason because that is going to remain dynamic for each table view implementation therefore we have to pass that in as the arguments of this table view cell
+        return configureCell(tableView, indexPath)
     }
 
     
