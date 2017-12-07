@@ -12,7 +12,9 @@ import CoreData
 
 class DisplaySessionsTableViewController: UITableViewController {
     
-    var dataSource = TableViewDataSource(item: [Session]())
+    let addSess = AddSessionViewController()
+    
+    var dataSource = TableViewDataSource(item: [Course]())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +25,14 @@ class DisplaySessionsTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let fetchRequest = NSFetchRequest<Session>(entityName: "Session")
+        let fetchRequest = NSFetchRequest<Course>(entityName: "Course")
         do {
-            let result = try? CoreDataStack.instance.viewContext.fetch(fetchRequest)
-            self.dataSource.items = result!
+            
+           fetchRequest.predicate = NSPredicate(format: "session == %@",  addSess.addSessionTextField.text!) 
+                let result = try? CoreDataStack.instance.viewContext.fetch(pred)
+                self.dataSource.items = result!
+
+            
         }
         
         tableView.dataSource = dataSource
