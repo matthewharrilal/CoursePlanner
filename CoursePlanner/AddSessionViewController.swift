@@ -8,9 +8,11 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class AddSessionViewController: UIViewController {
     
+    @IBOutlet weak var addSessionTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,14 @@ class AddSessionViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
-    
+    @IBAction func addSessionButton(_ sender: UIButton) {
+//        guard let sessionName = addSessionTextField.text else{return}
+//        let viewContext = CoreDataStack.instance.viewContext
+//        let session = Session(context: viewContext)
+//        session.meetingTimes = sessionName
+//
+//        CoreDataStack.instance.saveTo(context: viewContext)
+        guard let sessionName = addSessionTextField.text else {return}
+        let fetchRequest = nsfetchre
+    }
 }

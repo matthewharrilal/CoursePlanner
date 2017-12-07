@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="17B1003" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
-        <attribute name="meetingTimes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nameOfCourse" attributeType="String" syncable="YES"/>
         <relationship name="projects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Project" inverseName="course" inverseEntity="Project" syncable="YES"/>
         <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="course" inverseEntity="Session" syncable="YES"/>
@@ -17,13 +16,14 @@
         <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="projects" inverseEntity="Course" syncable="YES"/>
     </entity>
     <entity name="Session" representedClassName="Session" syncable="YES" codeGenerationType="class">
+        <attribute name="meetingTimes" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="sessions" inverseEntity="Course" syncable="YES"/>
         <relationship name="notes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Note" inverseName="session" inverseEntity="Note" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Course" positionX="-27" positionY="18" width="128" height="105"/>
+        <element name="Course" positionX="-27" positionY="18" width="128" height="90"/>
         <element name="Note" positionX="54" positionY="99" width="128" height="75"/>
         <element name="Project" positionX="18" positionY="63" width="128" height="105"/>
-        <element name="Session" positionX="18" positionY="63" width="128" height="75"/>
+        <element name="Session" positionX="18" positionY="63" width="128" height="90"/>
     </elements>
 </model>

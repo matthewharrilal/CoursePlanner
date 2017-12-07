@@ -35,17 +35,6 @@ class DisplayCourseViewController: UITableViewController {
             return cell!
             
         }
-        
-//        do {
-//            let result = try? CoreDataStack.instance.fetchRequestFromViewContext(type: Course.self)
-//            self.dataSource.items = result!
-//            self.tableView.reloadData()
-//        }
-//        catch {
-//            let error = error as NSError?
-//            print("Fatal error in the fetch request \(error), \(error?.localizedDescription)")
-//        }
-        
     
         self.tableView.reloadData()
     }
@@ -55,5 +44,8 @@ class DisplayCourseViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-   
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let course = self.dataSource.items[indexPath.row]
+        
+    }
 }

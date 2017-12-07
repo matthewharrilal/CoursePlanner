@@ -145,11 +145,17 @@
                                 <rect key="frame" x="142" y="318" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Session"/>
+                                <connections>
+                                    <action selector="addSessionButton:" destination="35z-Tb-0AQ" eventType="touchUpInside" id="WS8-PW-ov9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="OAJ-IT-nvS"/>
                     </view>
+                    <connections>
+                        <outlet property="addSessionTextField" destination="uqG-eK-BM6" id="J3Y-K5-Up6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HpU-yz-XjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
