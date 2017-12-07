@@ -30,6 +30,11 @@ class AddSessionViewController: UIViewController {
 //
 //        CoreDataStack.instance.saveTo(context: viewContext)
         guard let sessionName = addSessionTextField.text else {return}
-        let fetchRequest = nsfetchre
+        let fetchRequest = NSFetchRequest<Course>(entityName: "Cart")
+        let courses = DisplayCourseViewController()
+        let buttonPosition: CGPoint = sender.convert(CGPoint.zero, to: courses.tableView)
+        guard let indexPath = courses.tableView.indexPathForRow(at: buttonPosition) else {return}
+        let currentCourse = courses.dataSource.items[indexPath.row]
+        currentCourse.setValue(sessionName, forKey: "session")
     }
 }
