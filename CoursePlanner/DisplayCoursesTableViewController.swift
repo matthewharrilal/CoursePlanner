@@ -11,7 +11,7 @@ import UIKit
 import CoreData
 
 class DisplayCourseViewController: UITableViewController {
-   
+    
     var dataSource = TableViewDataSource(item: [Course]())
     
     override func viewDidLoad() {
@@ -40,7 +40,10 @@ class DisplayCourseViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let courses = dataSource.items[indexPath.row] else {return}
-        
+        let courses = dataSource.items[indexPath.row]
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let addSessionViewController = storyBoard.instantiateViewController(withIdentifier: "AddSessionViewController") as! AddSessionViewController
+        addSessionViewController.selectedCourse = courses
+        self.navigationController?.pushViewController(addSessionViewController, animated: true)
     }
 }

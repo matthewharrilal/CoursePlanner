@@ -36,7 +36,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="courseNameLabel" destination="GAy-f0-i9S" id="GtN-Pz-bc1"/>
-                                    <segue destination="9iN-YX-0Wc" kind="show" id="UgC-M4-c17"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -57,7 +56,7 @@
             </objects>
             <point key="canvasLocation" x="-204" y="154.27286356821591"/>
         </scene>
-        <!--Display Sessions View Controller-->
+        <!--Sessions-->
         <scene sceneID="wfK-ca-B6r">
             <objects>
                 <tableViewController id="9iN-YX-0Wc" customClass="DisplaySessionsViewController" customModule="CoursePlanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,15 +79,18 @@
                             <outlet property="delegate" destination="9iN-YX-0Wc" id="vfl-1Y-iWT"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Sessions" id="jtn-Ck-4RQ">
+                        <barButtonItem key="rightBarButtonItem" title="Add Session" id="4gm-eh-sLV"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BD7-qG-Coh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847" y="155"/>
+            <point key="canvasLocation" x="1698" y="154"/>
         </scene>
-        <!--Add Session View Controller-->
+        <!--AddSessionViewController-->
         <scene sceneID="Ubd-01-cTf">
             <objects>
-                <viewController id="cl9-Nt-ymB" customClass="AddSessionViewController" customModule="CoursePlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddSessionViewController" title="AddSessionViewController" id="cl9-Nt-ymB" customClass="AddSessionViewController" customModule="CoursePlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4cG-ET-t1X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,15 +106,29 @@
                                 <rect key="frame" x="144" y="318" width="87" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Session"/>
+                                <connections>
+                                    <action selector="addSessionButton:" destination="cl9-Nt-ymB" eventType="touchUpInside" id="bsw-2b-nMA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGZ-Xg-CDr">
+                                <rect key="frame" x="105" y="439" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Display Sessions"/>
+                                <connections>
+                                    <segue destination="9iN-YX-0Wc" kind="show" id="9R5-B6-De8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vx0-Zy-1UG"/>
                     </view>
+                    <connections>
+                        <outlet property="addSessionTextField" destination="PVO-9g-PMo" id="ELV-D1-RfN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pd2-KN-m45" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1695.2" y="154.27286356821591"/>
+            <point key="canvasLocation" x="777" y="154"/>
         </scene>
         <!--Add Course View Controller-->
         <scene sceneID="tne-QT-ifu">

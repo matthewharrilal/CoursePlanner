@@ -10,11 +10,14 @@ import Foundation
 import UIKit
 
 class DisplaySessionsViewController: UITableViewController {
+    
+    var dataSource
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
     }
     
     override func didReceiveMemoryWarning() {
