@@ -1,5 +1,5 @@
 //
-//  AddSessionViewController.swift
+//  DisplaySessionsViewController.swift
 //  CoursePlanner
 //
 //  Created by Matthew Harrilal on 12/8/17.
@@ -9,15 +9,15 @@
 import Foundation
 import UIKit
 
-class AddSessionViewController: UIViewController {
+class DisplaySessionsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 }

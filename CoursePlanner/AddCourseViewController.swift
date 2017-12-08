@@ -24,12 +24,9 @@ class AddCourseViewController: UIViewController {
     }
     
     @IBAction func addCourseButton(_ sender: Any) {
-        // Here we are going to add a course and save the value to core data
-        // MARK: TODO Feel as if we can abstract the way we go about saving values to core data
         guard let courseName = addCourseTextField.text else {return}
         let viewContext = CoreDataStack.instance.viewContext
         let course = Course(context: viewContext)
-       
         course.nameOfCourse = courseName
         CoreDataStack.instance.saveTo(context: viewContext)
     }
