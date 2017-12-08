@@ -13,6 +13,7 @@ import CoreData
 class DisplaySessionsViewController: UITableViewController {
     
     var courses: Course?
+    var sessions: [Session]?
     
     var dataSource = TableViewDataSource(item: [Course]())
     override func viewDidLoad() {
@@ -25,15 +26,13 @@ class DisplaySessionsViewController: UITableViewController {
         let fetchRequest = NSFetchRequest<Course>(entityName: "Course")
         fetchRequest.predicate = NSPredicate(format: "nameOfCourse == %@", (courses?.nameOfCourse)!)
         let result = try? CoreDataStack.instance.viewContext.fetch(fetchRequest)
-        print(result)
         dataSource.items = result!
+        print("This is the result \(result)")
         tableView.dataSource = dataSource
         dataSource.configureCell = {(tableView, indexPath) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-            let sessionName = self.dataSource.items[indexPath.row]
-            cell?.textLabel?.text = sessionName.nameOfCourse
-
-//            cell?.textLabel?.text = sessionName
+            let sessionName = self.dataSource.items[indexPath.row].sessions
+            print(sessionName?.value(forKey: "name"))
             return cell!
         }
     }
