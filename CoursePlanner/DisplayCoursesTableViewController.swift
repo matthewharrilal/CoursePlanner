@@ -43,6 +43,9 @@ class DisplayCourseViewController: UITableViewController {
         let courses = dataSource.items[indexPath.row]
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
         let addSessionViewController = storyBoard.instantiateViewController(withIdentifier: "AddSessionViewController") as! AddSessionViewController
+//        let displaySessionVC = storyBoard.instantiateViewController(withIdentifier: "DisplaySessionViewController") as! DisplaySessionsViewController
+//        displaySessionVC.selectedCourse = courses
+        
         addSessionViewController.selectedCourse = courses
         self.navigationController?.pushViewController(addSessionViewController, animated: true)
     }

@@ -12,11 +12,11 @@ import CoreData
 class AddSessionViewController: UIViewController {
     @IBOutlet weak var addSessionTextField: UITextField!
     
-    var selectedCourse: NSManagedObject?
+    var selectedCourse: Course?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("This was the selected course \(selectedCourse)")
+        print("This was the selected course \(selectedCourse?.nameOfCourse)")
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -28,9 +28,16 @@ class AddSessionViewController: UIViewController {
     
     @IBAction func addSessionButton(_ sender: UIButton) {
         guard let sessionName = addSessionTextField.text else {return}
-        selectedCourse?.setValue(sessionName, forKey: "session")
         let viewContext = CoreDataStack.instance.viewContext
+        let session = Session(context: viewContext)
+        session.setValue(sessionName, forKey: "name")
+        selectedCourse?.addToSessions(session)
         CoreDataStack.instance.saveTo(context: viewContext)
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let displaySession = storyboard.instantiateViewController(withIdentifier: "DisplaySessionViewController") as! DisplaySessionsViewController
+        print(selectedCourse?.nameOfCourse)
+        displaySession.courses = selectedCourse
+        self.navigationController?.pushViewController(displaySession, animated: true)
     }
     
 }
