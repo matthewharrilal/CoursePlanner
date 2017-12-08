@@ -29,14 +29,18 @@ class AddSessionViewController: UIViewController {
     @IBAction func addSessionButton(_ sender: UIButton) {
         guard let sessionName = addSessionTextField.text else {return}
         let viewContext = CoreDataStack.instance.viewContext
-        let session = Session(context: viewContext)
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Session", in: viewContext)
+        
+        let session = Session(entity: entity!, insertInto: viewContext)
+        
         session.setValue(sessionName, forKey: "name")
-        selectedCourse?.addToSessions(session)
+        selectedCourse?.session.insert(session)
         CoreDataStack.instance.saveTo(context: viewContext)
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let displaySession = storyboard.instantiateViewController(withIdentifier: "DisplaySessionViewController") as! DisplaySessionsViewController
-        print(selectedCourse?.nameOfCourse)
-        displaySession.courses = selectedCourse
+        
+        displaySession.course = selectedCourse
         self.navigationController?.pushViewController(displaySession, animated: true)
     }
     

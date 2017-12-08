@@ -69,11 +69,11 @@ public class CoreDataStack {
         }
     }
     
-    func fetchRequestFromViewContext<T: NSManagedObject>(type: T.Type) throws ->  [Course] {
-        let fetchRequest: NSFetchRequest<Course> = Course.fetchRequest()
-        
-        return try self.viewContext.fetch(fetchRequest)
-        
-    }
+//    func fetchRequestFromViewContext<T: NSManagedObject>(type: T.Type) throws ->  [Course] {
+//        let fetchRequest: NSFetchRequest<Course> = Course.fetchRequest() 
+//        
+//        return try self.viewContext.fetch(fetchRequest)
+//        
+//    }
 
 }
