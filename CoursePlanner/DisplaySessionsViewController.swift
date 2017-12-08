@@ -24,14 +24,13 @@ class DisplaySessionsViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        guard let course = course else {
-            return
-        }
-        
-        let sessions = course.session
+        guard let course = course,
+            let setSession = course.sessions,
+            let unwrappedSession = setSession.allObjects as? [Session]
+            else {return}
         
 //        var arr = sessions.allObjects as! [Session]
-        self.sessions = Array(sessions)
+        self.sessions = Array(unwrappedSession)
  
     
         

@@ -35,7 +35,7 @@ class AddSessionViewController: UIViewController {
         let session = Session(entity: entity!, insertInto: viewContext)
         
         session.setValue(sessionName, forKey: "name")
-        selectedCourse?.session.insert(session)
+        selectedCourse?.addToSessions(session)
         CoreDataStack.instance.saveTo(context: viewContext)
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let displaySession = storyboard.instantiateViewController(withIdentifier: "DisplaySessionViewController") as! DisplaySessionsViewController

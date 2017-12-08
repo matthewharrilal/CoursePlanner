@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17B1003" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Course" representedClassName="Course" syncable="YES">
+    <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
         <attribute name="meetingTimes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nameOfCourse" attributeType="String" syncable="YES"/>
         <relationship name="projects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Project" inverseName="course" inverseEntity="Project" syncable="YES"/>
@@ -16,7 +16,7 @@
         <attribute name="projectAssignment" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="projects" inverseEntity="Course" syncable="YES"/>
     </entity>
-    <entity name="Session" representedClassName="Session" syncable="YES">
+    <entity name="Session" representedClassName="Session" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="sessions" inverseEntity="Course" syncable="YES"/>
         <relationship name="notes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Note" inverseName="session" inverseEntity="Note" syncable="YES"/>
