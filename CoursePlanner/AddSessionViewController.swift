@@ -50,5 +50,11 @@ class AddSessionViewController: UIViewController {
         self.navigationController?.pushViewController(displaySession, animated: true)
     }
     
+    @IBAction func addPorjectButton(_ sender: UIButton) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let addProjectViewController = storyboard.instantiateViewController(withIdentifier: "AddProjectViewController") as! AddProjectViewController
+        addProjectViewController.course = self.selectedCourse
+        self.navigationController?.pushViewController(addProjectViewController, animated: true)
+    }
     
 }
