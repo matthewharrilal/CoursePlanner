@@ -38,4 +38,12 @@ class AddProjectViewController: UIViewController {
         displayProjectsTVC.course = self.course
         self.navigationController?.pushViewController(displayProjectsTVC, animated: true)
     }
+    @IBAction func displayProjectsButton(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let displayProjectTVC = storyboard.instantiateViewController(withIdentifier: "DisplayProjects") as! DisplayProjectsViewController
+        displayProjectTVC.course = self.coursegit
+        self.navigationController?.pushViewController(displayProjectTVC, animated: true)
+    }
+    
+    
 }

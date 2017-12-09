@@ -210,9 +210,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqh-hz-6hb">
-                                <rect key="frame" x="164" y="397" width="46" height="30"/>
+                                <rect key="frame" x="125" y="398" width="124" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Display Projects"/>
+                                <connections>
+                                    <action selector="displayProjectsButton:" destination="k1E-yE-3wW" eventType="touchUpInside" id="7uK-WB-5ZN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
