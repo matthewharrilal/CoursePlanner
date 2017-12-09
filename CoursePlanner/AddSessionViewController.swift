@@ -39,9 +39,16 @@ class AddSessionViewController: UIViewController {
         CoreDataStack.instance.saveTo(context: viewContext)
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let displaySession = storyboard.instantiateViewController(withIdentifier: "DisplaySessionViewController") as! DisplaySessionsViewController
-        
         displaySession.course = selectedCourse
         self.navigationController?.pushViewController(displaySession, animated: true)
     }
+    
+    @IBAction func displaySessionsButton(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let displaySession = storyboard.instantiateViewController(withIdentifier: "DisplaySessionViewController") as! DisplaySessionsViewController
+        displaySession.course = selectedCourse
+        self.navigationController?.pushViewController(displaySession, animated: true)
+    }
+    
     
 }

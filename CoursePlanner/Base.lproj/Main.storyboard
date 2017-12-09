@@ -115,7 +115,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Display Sessions"/>
                                 <connections>
-                                    <segue destination="9iN-YX-0Wc" kind="show" id="9R5-B6-De8"/>
+                                    <action selector="displaySessionsButton:" destination="cl9-Nt-ymB" eventType="touchUpInside" id="5mp-US-qhK"/>
                                 </connections>
                             </button>
                         </subviews>
