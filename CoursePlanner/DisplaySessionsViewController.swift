@@ -51,4 +51,12 @@ class DisplaySessionsViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let session = sessions[indexPath.row]
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let addNoteVC = storyboard.instantiateViewController(withIdentifier: "AddNoteViewController") as! AddNoteViewController
+        addNoteVC.session = session
+        self.navigationController?.pushViewController(addNoteVC, animated: true)
+    }
 }

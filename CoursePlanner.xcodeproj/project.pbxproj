@@ -10,6 +10,8 @@
 		1C03D3A71FDA4824005C3870 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C03D3A61FDA4824005C3870 /* CourseTableViewCell.swift */; };
 		1CB485E21FDB0BEC0096A5E3 /* DisplaySessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB485E11FDB0BEC0096A5E3 /* DisplaySessionsViewController.swift */; };
 		1CB485E41FDB0C700096A5E3 /* AddSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB485E31FDB0C700096A5E3 /* AddSessionViewController.swift */; };
+		1CB485EA1FDB6C250096A5E3 /* DisplayNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB485E91FDB6C250096A5E3 /* DisplayNotesTableViewController.swift */; };
+		1CB485EC1FDB6C710096A5E3 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB485EB1FDB6C710096A5E3 /* AddNoteViewController.swift */; };
 		1CE37F9B1FD6017400654396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE37F9A1FD6017400654396 /* AppDelegate.swift */; };
 		1CE37F9D1FD6017400654396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE37F9C1FD6017400654396 /* ViewController.swift */; };
 		1CE37FA01FD6017400654396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CE37F9E1FD6017400654396 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		1C03D3A61FDA4824005C3870 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		1CB485E11FDB0BEC0096A5E3 /* DisplaySessionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySessionsViewController.swift; sourceTree = "<group>"; };
 		1CB485E31FDB0C700096A5E3 /* AddSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionViewController.swift; sourceTree = "<group>"; };
+		1CB485E91FDB6C250096A5E3 /* DisplayNotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNotesTableViewController.swift; sourceTree = "<group>"; };
+		1CB485EB1FDB6C710096A5E3 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		1CE37F971FD6017400654396 /* CoursePlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoursePlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE37F9A1FD6017400654396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CE37F9C1FD6017400654396 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				1CE37F9A1FD6017400654396 /* AppDelegate.swift */,
 				1CE37F9C1FD6017400654396 /* ViewController.swift */,
 				1CB485E11FDB0BEC0096A5E3 /* DisplaySessionsViewController.swift */,
+				1CB485E91FDB6C250096A5E3 /* DisplayNotesTableViewController.swift */,
+				1CB485EB1FDB6C710096A5E3 /* AddNoteViewController.swift */,
 				1CB485E31FDB0C700096A5E3 /* AddSessionViewController.swift */,
 				1CE37F9E1FD6017400654396 /* Main.storyboard */,
 				1CE37FA41FD6017400654396 /* Assets.xcassets */,
@@ -166,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CB485EC1FDB6C710096A5E3 /* AddNoteViewController.swift in Sources */,
 				1CB485E21FDB0BEC0096A5E3 /* DisplaySessionsViewController.swift in Sources */,
 				1CB485E41FDB0C700096A5E3 /* AddSessionViewController.swift in Sources */,
 				1CE37F9D1FD6017400654396 /* ViewController.swift in Sources */,
@@ -173,6 +180,7 @@
 				1CE37F9B1FD6017400654396 /* AppDelegate.swift in Sources */,
 				1CE37FD71FD77A1E00654396 /* TableViewAbstraction.swift in Sources */,
 				1CE37FD51FD779B700654396 /* DisplayCoursesTableViewController.swift in Sources */,
+				1CB485EA1FDB6C250096A5E3 /* DisplayNotesTableViewController.swift in Sources */,
 				1CE37FD91FD77EB500654396 /* AddCourseViewController.swift in Sources */,
 				1CE37FDB1FD7EB3100654396 /* FetchRequestAbstraction.swift in Sources */,
 				1CE37FA31FD6017400654396 /* CoursePlanner.xcdatamodeld in Sources */,
