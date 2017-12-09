@@ -14,6 +14,10 @@ class AddProjectViewController: UIViewController {
     
     @IBOutlet weak var projectNameTextField: UITextField!
     
+    @IBOutlet weak var dueDateTextField: UITextField!
+    
+    @IBOutlet weak var completedTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -27,10 +31,16 @@ class AddProjectViewController: UIViewController {
     }
     
     @IBAction func addProjectButton(_ sender: Any) {
-        guard let projectName = projectNameTextField.text else {return}
+        guard let projectName = projectNameTextField.text,
+        let dueDate = dueDateTextField.text,
+        let completed = completedTextField.text
+        else {return}
+        
         let viewContext = CoreDataStack.instance.viewContext
         let project = Project(context: viewContext)
         project.setValue(projectName, forKey: "projectAssignment")
+        project.setValue(dueDate, forKey: "dueDate")
+        project.setValue(completed, forKey: "completed")
         self.course?.addToProjects(project)
         CoreDataStack.instance.saveTo(context: viewContext)
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
@@ -41,7 +51,7 @@ class AddProjectViewController: UIViewController {
     @IBAction func displayProjectsButton(_ sender: Any) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let displayProjectTVC = storyboard.instantiateViewController(withIdentifier: "DisplayProjects") as! DisplayProjectsViewController
-        displayProjectTVC.course = self.coursegit
+        displayProjectTVC.course = self.course
         self.navigationController?.pushViewController(displayProjectTVC, animated: true)
     }
     

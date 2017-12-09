@@ -14,6 +14,7 @@
 		1CB485EC1FDB6C710096A5E3 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB485EB1FDB6C710096A5E3 /* AddNoteViewController.swift */; };
 		1CB485EE1FDBB1EC0096A5E3 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB485ED1FDBB1EC0096A5E3 /* AddProjectViewController.swift */; };
 		1CB485F01FDBB2360096A5E3 /* DisplayProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB485EF1FDBB2360096A5E3 /* DisplayProjectsViewController.swift */; };
+		1CB485F21FDBB9080096A5E3 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB485F11FDBB9080096A5E3 /* ProjectTableViewCell.swift */; };
 		1CE37F9B1FD6017400654396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE37F9A1FD6017400654396 /* AppDelegate.swift */; };
 		1CE37F9D1FD6017400654396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE37F9C1FD6017400654396 /* ViewController.swift */; };
 		1CE37FA01FD6017400654396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CE37F9E1FD6017400654396 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		1CB485EB1FDB6C710096A5E3 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		1CB485ED1FDBB1EC0096A5E3 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		1CB485EF1FDBB2360096A5E3 /* DisplayProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayProjectsViewController.swift; sourceTree = "<group>"; };
+		1CB485F11FDBB9080096A5E3 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		1CE37F971FD6017400654396 /* CoursePlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoursePlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE37F9A1FD6017400654396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CE37F9C1FD6017400654396 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				1C03D3A61FDA4824005C3870 /* CourseTableViewCell.swift */,
 				1CB485ED1FDBB1EC0096A5E3 /* AddProjectViewController.swift */,
 				1CB485EF1FDBB2360096A5E3 /* DisplayProjectsViewController.swift */,
+				1CB485F11FDBB9080096A5E3 /* ProjectTableViewCell.swift */,
 			);
 			path = CoursePlanner;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				1CB485EE1FDBB1EC0096A5E3 /* AddProjectViewController.swift in Sources */,
 				1CE37F9D1FD6017400654396 /* ViewController.swift in Sources */,
 				1CB485F01FDBB2360096A5E3 /* DisplayProjectsViewController.swift in Sources */,
+				1CB485F21FDBB9080096A5E3 /* ProjectTableViewCell.swift in Sources */,
 				1CE37FDD1FD8867700654396 /* MeetingTimeTableViewController.swift in Sources */,
 				1CE37F9B1FD6017400654396 /* AppDelegate.swift in Sources */,
 				1CE37FD71FD77A1E00654396 /* TableViewAbstraction.swift in Sources */,

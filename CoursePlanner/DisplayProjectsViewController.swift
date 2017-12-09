@@ -30,9 +30,9 @@ class DisplayProjectsViewController: UITableViewController {
         self.dataSource.items = self.project
         tableView.dataSource = dataSource
         dataSource.configureCell = {(tableView, indexPath) -> UITableViewCell in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ProjectTableViewCell
             let project = self.dataSource.items[indexPath.row]
-            cell?.textLabel?.text = project.projectAssignment
+            cell?.?.text = project.projectAssignment
             return cell!
         }
         self.tableView.reloadData()

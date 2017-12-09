@@ -11,7 +11,7 @@
         <relationship name="session" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="notes" inverseEntity="Session" syncable="YES"/>
     </entity>
     <entity name="Project" representedClassName="Project" syncable="YES" codeGenerationType="class">
-        <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="completed" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dueDate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="projectAssignment" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="projects" inverseEntity="Course" syncable="YES"/>
