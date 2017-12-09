@@ -197,6 +197,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="completedLabel" destination="CGS-5d-zes" id="Pa5-hb-17u"/>
+                                    <outlet property="dueDateLabel" destination="rLy-5k-8bd" id="Hq1-MU-Yd6"/>
+                                    <outlet property="nameLabel" destination="Ojp-BB-iYO" id="yT1-yt-Q72"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
