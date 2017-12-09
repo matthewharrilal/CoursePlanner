@@ -33,6 +33,9 @@ class AddProjectViewController: UIViewController {
         project.setValue(projectName, forKey: "projectAssignment")
         self.course?.addToProjects(project)
         CoreDataStack.instance.saveTo(context: viewContext)
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let displayProjectsTVC = storyboard.instantiateViewController(withIdentifier: "DisplayProjects") as! DisplayProjectsViewController
+        displayProjectsTVC.course = self.course
+        self.navigationController?.pushViewController(displayProjectsTVC, animated: true)
     }
-    
 }

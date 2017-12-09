@@ -161,7 +161,7 @@
         <!--Display Projects View Controller-->
         <scene sceneID="kdL-TW-ZMY">
             <objects>
-                <tableViewController id="Aaw-Fg-dWv" customClass="DisplayProjectsViewController" customModule="CoursePlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DisplayProjects" id="Aaw-Fg-dWv" customClass="DisplayProjectsViewController" customModule="CoursePlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RUm-Pb-9Jh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,6 +208,11 @@
                                 <connections>
                                     <action selector="addProjectButton:" destination="k1E-yE-3wW" eventType="touchUpInside" id="a0p-45-oH0"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqh-hz-6hb">
+                                <rect key="frame" x="164" y="397" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
