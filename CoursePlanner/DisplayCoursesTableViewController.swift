@@ -20,9 +20,10 @@ class DisplayCourseViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        let fetchRequest = NSFetchRequest<Course>(entityName:"Course")
-        
-        let result = try? CoreDataStack.instance.viewContext.fetch(fetchRequest)
+//        let fetchRequest = NSFetchRequest<Course>(entityName:"Course")
+//
+//        let result = try? CoreDataStack.instance.viewContext.fetch(fetchRequest)
+        let result = fetchRequest(nameOfEntity: "Course", type: Course.self)
         dataSource.items = result!
         tableView.dataSource = dataSource
         dataSource.configureCell = {(tableView, indexPath) -> UITableViewCell in
