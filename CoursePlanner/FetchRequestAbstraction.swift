@@ -11,11 +11,9 @@ import UIKit
 import CoreData
 
 
-//extension Course {
-//    convenience init(context: NSManagedObjectContext) {
-//        let entity = NSEntityDescription()
-//        entity.name = "Course"
-//        self.init(entity: entity, insertInto: context)
-//    }
-//}
+func fetchRequest<T: NSManagedObject>(nameOfEntity: String, type: T.Type) -> [T]? {
+    let fetchRequest = NSFetchRequest<T>(entityName: nameOfEntity)
+    let result = try? CoreDataStack.instance.viewContext.fetch(fetchRequest)
+    return result
+}
 
