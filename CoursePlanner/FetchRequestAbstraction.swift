@@ -17,3 +17,5 @@ func fetchRequest<T: NSManagedObject>(nameOfEntity: String, type: T.Type) -> [T]
     return result
 }
 
+
+
