@@ -43,14 +43,12 @@ class AddProjectViewController: UIViewController {
         project.setValue(completed, forKey: "completed")
         self.course?.addToProjects(project)
         CoreDataStack.instance.saveTo(context: viewContext)
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let displayProjectsTVC = storyboard.instantiateViewController(withIdentifier: "DisplayProjects") as! DisplayProjectsViewController
+        let displayProjectsTVC = sendObjectToTableViewController(nameOfViewController: DisplayProjectsViewController.self)
         displayProjectsTVC.course = self.course
         self.navigationController?.pushViewController(displayProjectsTVC, animated: true)
     }
     @IBAction func displayProjectsButton(_ sender: Any) {
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let displayProjectTVC = storyboard.instantiateViewController(withIdentifier: "DisplayProjects") as! DisplayProjectsViewController
+        let displayProjectTVC = sendObjectToTableViewController(nameOfViewController: DisplayProjectsViewController.self)
         displayProjectTVC.course = self.course
         self.navigationController?.pushViewController(displayProjectTVC, animated: true)
     }

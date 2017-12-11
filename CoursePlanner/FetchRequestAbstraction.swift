@@ -17,5 +17,20 @@ func fetchRequest<T: NSManagedObject>(nameOfEntity: String, type: T.Type) -> [T]
     return result
 }
 
+//let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+//let displayNoteViewController = storyboard.instantiateViewController(withIdentifier: "DisplayNotesTableViewController") as! DisplayNotesTableViewController
+//displayNoteViewController.session = self.session
+//self.navigationController?.pushViewController(displayNoteViewController, animated: true)
+//
 
+func sendObjectToTableViewController<T : UITableViewController>(nameOfViewController: T.Type) -> T {
+    let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+    let viewController = storyboard.instantiateViewController(withIdentifier: String(describing: nameOfViewController)) as! T
+    return viewController
+}
 
+func sendObjectFromViewController<T: UIViewController>(nameOfViewController: T.Type) -> T {
+    let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+    let viewController = storyboard.instantiateViewController(withIdentifier: String(describing: nameOfViewController)) as! T
+    return viewController
+}

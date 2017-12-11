@@ -37,22 +37,19 @@ class AddSessionViewController: UIViewController {
         session.setValue(sessionName, forKey: "name")
         selectedCourse?.addToSessions(session)
         CoreDataStack.instance.saveTo(context: viewContext)
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let displaySession = storyboard.instantiateViewController(withIdentifier: "DisplaySessionViewController") as! DisplaySessionsViewController
+        let displaySession = sendObjectToTableViewController(nameOfViewController: DisplaySessionsViewController.self)
         displaySession.course = selectedCourse
         self.navigationController?.pushViewController(displaySession, animated: true)
     }
     
     @IBAction func displaySessionsButton(_ sender: Any) {
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let displaySession = storyboard.instantiateViewController(withIdentifier: "DisplaySessionViewController") as! DisplaySessionsViewController
+        var displaySession = sendObjectToTableViewController(nameOfViewController: DisplaySessionsViewController.self)
         displaySession.course = selectedCourse
         self.navigationController?.pushViewController(displaySession, animated: true)
     }
     
     @IBAction func addPorjectButton(_ sender: UIButton) {
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let addProjectViewController = storyboard.instantiateViewController(withIdentifier: "AddProjectViewController") as! AddProjectViewController
+        let addProjectViewController = sendObjectFromViewController(nameOfViewController: AddProjectViewController.self)
         addProjectViewController.course = self.selectedCourse
         self.navigationController?.pushViewController(addProjectViewController, animated: true)
     }

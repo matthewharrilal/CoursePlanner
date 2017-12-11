@@ -34,15 +34,13 @@ class AddNoteViewController: UIViewController {
         note.setValue(addNoteText, forKey: "contentOfNote")
         session?.addToNotes(note)
         CoreDataStack.instance.saveTo(context: viewContext)
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let displayNoteViewController = storyboard.instantiateViewController(withIdentifier: "DisplayNotesTableViewController") as! DisplayNotesTableViewController
+        let displayNoteViewController = sendObjectToTableViewController(nameOfViewController: DisplayNotesTableViewController.self)
         displayNoteViewController.session = self.session
         self.navigationController?.pushViewController(displayNoteViewController, animated: true)
     }
     
     @IBAction func displayNotesButton(_ sender: Any) {
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let displayNoteViewController = storyboard.instantiateViewController(withIdentifier: "DisplayNotesTableViewController") as! DisplayNotesTableViewController
+        let displayNoteViewController = sendObjectToTableViewController(nameOfViewController: DisplayNotesTableViewController.self)
         displayNoteViewController.session = self.session
         self.navigationController?.pushViewController(displayNoteViewController, animated: true)
     }
